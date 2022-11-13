@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Menu } from "./components/Menu";
+import { PaginaPadrao } from './components/PaginaPadrao';
+import { Inicio } from "./pages/Inicio";
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+    <BrowserRouter>
+        <Menu />
+      <Routes>
+         <Route path="/" element={<PaginaPadrao/>}>
+          <Route path="/" element={<Inicio />} /> 
+          </Route>
+          <Route path="*" element={<div>Erro 404 - Página não encontrada.</div>} /> 
+      </Routes>
+    </BrowserRouter>
+   </>
   );
-}
-
+};
 export default App;
