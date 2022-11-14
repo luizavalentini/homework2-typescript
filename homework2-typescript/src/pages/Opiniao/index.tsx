@@ -40,7 +40,7 @@ export const Opiniao: React.FC = () => {
       });
     }
   };
-  async function validate() {
+  async function validate(): Promise<any> {
     let schema = yup.object().shape({
       password: yup
         .string()
