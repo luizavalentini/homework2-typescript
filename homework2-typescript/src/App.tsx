@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Menu } from "./components/Menu";
 import { PaginaPadrao } from './components/PaginaPadrao';
 import { Inicio } from "./pages/Inicio";
+import Opiniao from './pages/Opiniao';
 
 export const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ export const App: React.FC = () => {
          <Route path="/" element={<PaginaPadrao/>}>
           <Route path="/" element={<Inicio />} /> 
           </Route>
+          <Route path="/Opiniao" element={<Opiniao />} />
           <Route path="*" element={<div>Erro 404 - Página não encontrada.</div>} /> 
       </Routes>
     </BrowserRouter>
