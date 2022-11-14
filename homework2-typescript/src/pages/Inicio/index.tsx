@@ -4,7 +4,6 @@ import { PostCard } from "../../components/PostCard";
 
 export const Inicio: React.FC = () => {
     return(
-        <>
             <ul className={styles.posts}>
                 {posts.map((post) => (
                     <li key={post.id}>
@@ -12,8 +11,6 @@ export const Inicio: React.FC = () => {
                     </li>
                 ))}                
             </ul>           
-      
-        </>
     );
 }
 export default Inicio;

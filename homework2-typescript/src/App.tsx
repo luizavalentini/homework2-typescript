@@ -6,7 +6,6 @@ import { Inicio } from "./pages/Inicio";
 
 export const App: React.FC = () => {
   return (
-   <>
     <BrowserRouter>
         <Menu />
       <Routes>
@@ -16,7 +15,6 @@ export const App: React.FC = () => {
           <Route path="*" element={<div>Erro 404 - Página não encontrada.</div>} /> 
       </Routes>
     </BrowserRouter>
-   </>
   );
 };
-export default App;
+export default App
